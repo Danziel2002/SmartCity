@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+            <iframe src='http://192.168.43.100:8080'>
+	{% for post in posts %}
+
+          <div  class="media-body">
+            <div class="article-metadata">
+            <h1 class="article-content">{{ post.title}}</h1>
+            </div>
+            <p class="article-content">{{ post.description }}</p>
+          </div>
+        </article>
+    {% endfor %}
+            <p class='article-content'>{{ level }} </p>
+{% endblock content %}
